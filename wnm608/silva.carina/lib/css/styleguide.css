@@ -118,6 +118,8 @@ a:hover {
 }
 
 
+
+
 /* CARD COMPONENT */
 .card {
 	background-color: var(--color-white);
@@ -159,6 +161,18 @@ a:hover {
 
 	.card.flat {
 		padding: 0;
+	}
+
+	.card img {
+
+		width: 10em;
+		aspect-ratio: 3 / 4;
+		object-fit: cover;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 1em;
+
+
 	}
 
 
@@ -215,8 +229,6 @@ a:hover {
 
 .footbar {
 
-	position: sticky;
-	bottom:0;
 	z-index: 1001;
 
 	background-color: var(--color-neutral-dark);
