@@ -4,7 +4,25 @@
 
 body {
 
-	background-color:var(--color-offwhite);
+	background-color:var(--color-white);
 }
 
+h1 {
+	font-size: 5em;
+	font-weight: 300;
+}
 
+h2 {
+
+	font-family: var(--font-sans-serif);
+	font-variation-settings: 'wght' 100, 'CRSV' 1, 'SHRP' 0, 'slnt' -12;
+	font-size: 1.75em;
+}
+
+h3 {
+
+	font-family: var(--font-sans-serif);
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-variation-settings: 'wght' 400, 'CRSV' 1, 'SHRP' 0, 'slnt' 0;
+}
