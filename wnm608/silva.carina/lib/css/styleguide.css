@@ -16,11 +16,18 @@
 
 
 :root {
+
 	--color-white:#ffffff;
+	--color-black:#000000;
+
 	--color-neutral-light:#f7fcfb; /* Porecelain */
 	--color-neutral-medium: #e7e4de; /* Charcoal */
 	--color-neutral-dark:#242326; /* Shadow Grey */
-	--color-black:#000000;
+
+	--color-main-light: #FF9B99;
+	--color-main-medium: #F25F5C;
+	--color-main-dark: #AA100E;
+
 
 	--header-height:3rem; 
 	--spacing: 1rem;
@@ -93,6 +100,104 @@ a:hover {
 
 }
 
+.nav a {
+	display: block;
+}
+
+.nav a:hover {
+	background-color: var(--color-main-medium);
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+
+.nav .active a  {
+	background-color: var(--color-main-light);
+	color: inherit;
+	text-decoration: none;
+}
+
+.nav-stretch ul,
+.nav-pills ul, 
+.nav-crumbs ul, 
+.nav-material ul, 
+.nav-flex ul {
+
+	display: flex;
+}
+
+.nav-flex li {
+	padding: 0 1em;
+}
+
+.nav-stretch li,
+.nav-material li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a {
+	border-radius: 2em;
+	padding: 0.05em 0.5em;
+
+}
+
+
+.nav-crumbs a {
+	display: inline-block;
+}
+
+
+.nav-crumbs .active a, 
+.nav-crumbs a:hover {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: underline;
+
+}
+
+
+.nav-crumbs li:not(:first-child)::before {
+	content:'/'; 
+}
+
+.nav-material a {
+		padding: 0.5em 1em;
+		position:relative;
+
+}
+
+.nav-material .active a {
+		background-color: transparent;
+		color: inherit;
+}
+
+.nav-material a:hover {
+		background-color: var(--color-neutral-light);
+		color: inherit;
+
+}
+
+.nav-material a::after {
+	content: '';
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color:var(--color-main-medium);
+	transition: all 0.3s;
+
+		
+}
+
+.nav-material .active a::after {
+		height: 4px;
+}
+
+
+
+
 
 .navbar {
 
@@ -113,7 +218,6 @@ a:hover {
 }
 
 .navbar a {
-	padding: 0 0.5em;
 	font-variation-settings: 'wght' 100, 'CRSV' 0, 'SHRP' 0, 'slnt' 0;
 }
 
@@ -201,9 +305,6 @@ a:hover {
 	margin-left: 0.1rem;
 	margin-right: 0.1rem;
 
-
-
-	padding: 0.75em 2.5em;
 	border: 0.09em solid var(--color-neutral-light);
 	border-radius: 1.4rem;
 

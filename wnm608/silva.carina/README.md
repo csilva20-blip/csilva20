@@ -1,4 +1,10 @@
 README.md
 # Carina Silva 
 
-- https://carinasilvaportfolio.com/wnm608/silva.carina/README.md
+## Relevant Links
+
+- https://carinasilvaportfolio.com
+- https://carinasilvaportfolio.com/wnm608/silva.carina
+- https://carinasilvaportfolio.com/wnm608/silva.carina/styleguide
+- 
+
