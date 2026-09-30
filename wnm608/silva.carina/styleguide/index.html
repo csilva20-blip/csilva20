@@ -17,6 +17,10 @@
 <body>
 
 	<header class="navbar">
+
+		<div class="hero-window" style="background-image: url('../img/terr.jpg')"></div>
+		
+
 		<div class="container display-flex">
 
 			<div class="flex-none">
@@ -25,7 +29,7 @@
 			
 			<div class="flex-stretch"></div>
 			
-			<nav class=" flex-none nav">
+			<nav class=" flex-none nav nav-pills">
 				<ul class="container display-flex">
 					<li><a href="#tableofcontents">Table of Contents</a></li>
 				</ul>
@@ -38,14 +42,17 @@
 		<h2>Table of Contents</h2>
 
 		<div class="card">
-
+			<div class="nav">
 			<ul>
 				<li><a href="#typography">Typography</a></li>
-
-				<ul>
+				<div class="nav nav-flex">
+					<ul>
 					<li><a href="#headings">Headings</a></li>
 					<li><a href="#paragraphs">Paragraphs</a></li>
 				</ul>
+					
+				</div>
+				
 
 				<li><a href="#cards">Cards</a></li>
 				<li><a href="#navigation">Navigation</a></li>
@@ -54,6 +61,10 @@
 				<li><a href="#viewwindow">View Window</a></li>
 				<li><a href="#flexsystem">Flex System</a></li>
 			</ul>
+				
+			</div>
+
+
 		</div>
 	</div>
 
@@ -176,12 +187,193 @@
 	<div class="container" id="viewwindow">
 
 		<h2> View Window </h2>
-		<div class="view-window" style="background-image: url('../img/emma.jpeg')"></div>
-
+		<div class="view-window" style="background-image: url('../img/terr.jpg')"></div>
 		
 	</div>
 
-
 	
+	
+
+
+	<div class="container" id="">
+		<h2> Grid System </h2>
+
+		<h2> Flex System </h2>
+
+	</div>
+
+
+	<script>
+		const makeTable = (classes='') => {
+			const head = ['ID','Office','Name','Email','Phone'];
+			const body = [
+				['101',"Data 1",'data1@example.com','555-0001'],
+		        ['102',"Data 2",'data2@example.com','555-0002'],
+		        ['103',"Data 3",'data3@example.com','555-0003'],
+		        ['104',"Data 4",'data4@example.com','555-0004'],
+		        ['105',"Data 5",'data5@example.com','555-0005'],
+		    ];
+
+		    // let ran = Math.floor(Math.random()*Links.length);
+		    document.write(`
+		    <table class="${classes}">
+		        <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+		        <tbody>${body.reduce((r,o,i)=>r+
+		            `<tr>${
+		                [i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+		            }</tr>`,'')
+		        }</tbody>
+		    </table>
+		    `);
+		}
+	</script>
+
+	<div class="container" id="">
+		<h2> Tables </h2>
+
+		<div class="card soft">
+			<h3>Basic Table</h3>
+			<script>makeTable("table")</script>
+		</div>
+
+		<div class="card soft">
+			<h3>Striped Table</h3>
+			<script>makeTable("table striped")</script>
+		</div>
+		
+		<div class="card soft">
+			<h3>Lined Vertical</h3>
+			<script>makeTable("table lined vertical")</script>
+		</div>
+
+		<div class="card soft">
+			<h3>Lined Horizontal</h3>
+			<script>makeTable("table lined horizontal")</script>
+		</div>
+
+		<div class="card soft">
+			<h3>Lined Border</h3>
+			<script>makeTable("table lined border")</script>
+		</div>
+
+		<div class="card soft">
+			<h3>Lined</h3>
+			<script>makeTable("table lined all")</script>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<h2> Figures </h2>
+		<div class="card soft">
+
+		<h3>Basic Figures</h3>
+
+			<figure class="figure">
+				<img src="../img/product.jpg" alt="placeholder">
+				<figcaption>Product</figcaption>
+			</figure>
+		</div>
+
+		<div class="card soft">
+
+			<h3>Figure Grid</h3>
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product</figcaption>
+					</figure>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product</figcaption>
+					</figure>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="card medium">
+				<h3>Product Grid</h3>
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product Name</figcaption>
+						<div>$40.00</div>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+						
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product Name</figcaption>
+						<div>$40.00</div>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>Product Name</figcaption>
+						<div>$40.00</div>
+					</figure>
+				</div>
+			</div>
+		</div>	
+
+
+
+		<div class="card medium">
+				<h3>Product Overlay</h3>
+		<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product product-overlay">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>
+							<div class="caption-body">
+								<div>Product Name</div>
+								<div>$40.00</div>
+							</div>
+						</figcaption>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product product-overlay">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>
+							<div class="caption-body">
+								<div>Product Name</div>
+								<div>$40.00</div>
+							</div>
+						</figcaption>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product product-overlay">
+						<img src="../img/product.jpg" alt="placeholder">
+						<figcaption>
+							<div class="caption-body">
+								<div>Product Name</div>
+								<div>$40.00</div>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>	
+
+
+	</div>
 </body>
 </html>
