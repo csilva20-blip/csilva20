@@ -6,14 +6,6 @@
 :root {
 
 
-	--color-neutral-light:#F4F1EF; 
-	--color-neutral-medium: #9d9890; 
-	--color-neutral-dark:#8B3F22; 
-
-	--color-main-light: #f2d5c4;
-	--color-main-medium: #c8714a;
-	--color-main-dark: #8b3f22;
-
 	--font-serif: "Broadacre Light 2", Georgia, "Times New Roman", serif;/* Choose any font - gracefully degrade! */
 	--font-sans-serif: "cantarell", "geologica-variable", Helvetica, Arial, sans-serif;
 
@@ -29,6 +21,8 @@ body {
 	margin: 0;
 	font-size: 100%;
 	font-family:var(--font-sans-serif);
+
+	padding-bottom: 6em;
 
 
 }
@@ -69,6 +63,8 @@ a:hover {
 	margin-bottom: 3em;
 
 }
+
+
 
 
 .figure.product {
@@ -141,4 +137,6 @@ a:hover {
 		padding: 0;
 	}
 }
+
+
 
