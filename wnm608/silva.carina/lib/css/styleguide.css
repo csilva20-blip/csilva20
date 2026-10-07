@@ -146,6 +146,8 @@ a:hover {
 .flex-align-center { align-items:center } /* up and down */
 .flex-justify-center { justify-content:center; } /* left and right */
 
+.hidden { display: none; }
+
 
 /* ==========================================================================
    NAVIGATION -- nav - ul, li, a -- Stretch, Flex, Breadcrumbs, Pills, Material nav options
@@ -369,6 +371,8 @@ a:hover {
 
 
 
+
+
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
@@ -400,6 +404,45 @@ a:hover {
 	color: var(--color-neutral-dark);
 	border: 0.1em solid var(--color-neutral-dark);
 
+}
+
+
+
+.toggle label {
+
+	font-size: 1em;
+   	
+  	display: inline-block;
+   width: 2.3em;
+   height: 1.2em;
+   border-radius: 1.2em;
+   position: relative;
+   border: 0.1em solid var(--color-neutral-medium);
+   background-color: var(--color-neutral-medium);
+   transition: all 0.3s; 
+
+}
+
+.toggle label::after {
+	content:'';
+	display: inline-block;
+   width: 1em;
+   height: 1em;
+   border-radius: 1em;
+   position: absolute;
+   background-color: var(--color-white);
+   transition: all 0.3s;   
+}
+
+.toggle input:checked + label {
+  background-color: var(--color-secondary-medium); 
+  border-color: var(--color-secondary-medium);
+}
+
+.toggle input:checked + label::after {
+
+	transform: translateX(1.1em);
+	
 }
 
 

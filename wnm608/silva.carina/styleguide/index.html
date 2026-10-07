@@ -48,9 +48,9 @@
 				<li><a href="#typography">Typography</a></li>
 				<div class=" nav sub">
 					<ul>
-						<li><a href="#fontfamilies"> Font Families</a></li>
-						<li><a href="#headings"> Headings</a></li>
-						<li><a href="#paragraphs"> Paragraphs</a></li>
+						<li><a href="#fontfamilies"> - Font Families</a></li>
+						<li><a href="#headings"> - Headings</a></li>
+						<li><a href="#paragraphs"> - Paragraphs</a></li>
 					</ul>
 				</div>
 				<li><a href="#cards">Cards</a></li>
@@ -60,8 +60,8 @@
 				<li><a href="#layoutsystems">Layout Systems</a></li>
 				<div class=" nav sub">
 					<ul>
-						<li><a href="#gridsystem"> Grid System</a></li>
-						<li><a href="#flexsystem"> Flex System</a></li>
+						<li><a href="#gridsystem"> - Grid System</a></li>
+						<li><a href="#flexsystem"> - Flex System</a></li>
 					</ul>
 				</div>
 
@@ -70,10 +70,10 @@
 
 				<div class=" nav sub">
 					<ul>
-						<li><a href="#inputs"> Inputs</a></li>
-						<li><a href="#labels"> Labels</a></li>
-						<li><a href="#controls"> Controls</a></li>
-						<li><a href="#buttons"> Buttons</a></li>
+						<li><a href="#inputs"> -Inputs</a></li>
+						<li><a href="#labels">  - Labels</a></li>
+						<li><a href="#controls"> -  Controls</a></li>
+						<li><a href="#buttons">  - Buttons</a></li>
 				</ul>
 					
 				</div>
@@ -319,36 +319,48 @@
 	  			    <div class="card medium col-xs-12 col-md-3" >3 columns</div>
 	  			  </div>
 	  		</div> 
-	  		
 	  	</div>
-
 	</div>
 
+	<div class="container">
+
+		<h2 id="basic-variations">Forms & Warnings</h2>
+
+		<div class="card hard">
+			
+			<h3>Required w/ Warings</h3>
+			<div class="form-control">
+				<label class="form-label" for="name-req">Full name *</label>
+				<input id="name-req" type="text" placeholder="Name" class="form-input" required>
+			</div>
+
+			<div class="form-control">
+				<label class="form-label" for="email-err">Email</label>
+				<input id="email-err" type="email" value="name@.com" class="form-input">
+				<small style="color: var(--color-main-dark);"> &#9888; Please enter a valid email address</small>
+			</div>
+
+			<div class="form-control">
+				<label class="form-label" for="email-ok">Email</label>
+				<input id="email-ok" type="email" value="jane@example.com" class="form-input" aria-describedby="email-ok-msg">
+				<small style="color: var(--color-secondary-dark);"> &#10003; Looks good</small>
+			</div>
+
+			<div class="form-control display-flex flex-align-center">
+				<div class="flex-stretch">
+					<input type="email" placeholder="Email" class="form-input">
+				</div>
+				<div class="flex-none">
+					<button type="submit" class="form-button">Subscribe</button>
+				</div>
+				
+			</div>
 
 
-			  
+		</div>
+	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 </body>
-
 
 
 
