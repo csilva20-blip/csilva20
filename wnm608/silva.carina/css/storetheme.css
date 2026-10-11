@@ -24,7 +24,6 @@ body {
 
 	padding-bottom: 6em;
 
-
 }
 
 h1,
@@ -69,14 +68,26 @@ a:hover {
 }
 
 /* ==========================================================================
-   Products 
+   Collection Figures 
    ========================================================================== */
 
+   .figure.collection {
+	overflow: hidden;
+}
+
+/* ==========================================================================
+   Product Figures
+   ========================================================================== */
+
+
 .figure.product {
+
 	border-radius: 0.5em;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
+
 }
+
 
 .product-overlay {
 	position: relative;

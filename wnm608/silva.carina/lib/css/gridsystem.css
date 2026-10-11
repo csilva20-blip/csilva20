@@ -18,6 +18,7 @@
 
 
 
+
 /* EXTRA SMALL */
 
 @media(min-width: 0) { 
@@ -68,7 +69,14 @@
 
 /* MEDIUM */
 
+@media (max-width: 767px) {
+  .trim-4 > :nth-child(4) { display: none; }
+}
+
+
+
 @media(min-width: 768px ) {
+
 
 	.gap.md.small { --grid-gap: 0.5em; }
 	.gap.md.medium { --grid-gap: 1em; }

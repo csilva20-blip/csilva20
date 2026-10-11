@@ -1,234 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
 
-	<title> Clay & Coil Styleguide</title>
+<title> Styleguide</title>
 
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
-	<link rel="stylesheet" href="../lib/css/gridsystem.css">
-	<link rel="stylesheet" href="../css/storetheme.css">
+<link rel="stylesheet" href="../lib/css/styleguide.css">
+<link rel="stylesheet" href="../lib/css/gridsystem.css">
+<link rel="stylesheet" href="../css/storetheme.css">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
 </head>
-
 <body>
 
-	<header class="navbar">
-
-		<div class="container display-flex">
-
-			<div class="flex-none">
-				<h1> Clay & Coil Styleguide</h1>
-			</div>
-			
-			<div class="flex-stretch"></div>
-			
-			<nav class=" flex-none nav">
-				<ul class="flex-none nav nav-crumbs">
-					<li><a href="#tableofcontents">Table of Contents</a></li>
-				</ul>
-			</nav>
+<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-none">
+			<h1> Styleguide</h1>
 		</div>
+		<div class="flex-stretch"></div>
+		<nav class=" flex-none nav">
+			<ul class="flex-none nav nav-crumbs">
+				<li><a href="#tableofcontents">Table of Contents</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
 
-	</header>
+<div class="hero-window" style="background-image: url('../img/terr.jpg')"></div>
 
+<div class="container" id="tableofcontents">
+	<h2 >Table of Contents</h2>
 
-	<div  id="tableofcontents" class="hero-window" style="background-image: url('../img/terr.jpg')"></div>
-	<div class="container" >
+	<div class="card">
+		<div class="grid gap">
+			<div class="col-xs-12 col-sm-6" style="min-height:7em;">
 
-		<h2 >Table of Contents</h2>
+				<h3>Foundations</h3>
+				<div class="nav">
+					
+					  <ul>
+					    <li><a href="#typography">Typography</a></li>
+					    <li><a href="#fontfamilies">Font Families</a></li>
+					    <li><a href="#headings">Headings</a></li>
+					    <li><a href="#paragraphs">Paragraphs</a></li>
+					    <li><a href="#color">Color Palette</a></li>
 
-		<div class="card">
-			<div class="nav">
-			<ul>
-				<li><a href="#typography">Typography</a></li>
-				<div class=" nav sub">
-					<ul>
-						<li><a href="#fontfamilies"> - Font Families</a></li>
-						<li><a href="#headings"> - Headings</a></li>
-						<li><a href="#paragraphs"> - Paragraphs</a></li>
-					</ul>
+					  </ul>
+		
 				</div>
-				<li><a href="#cards">Cards</a></li>
-				<li><a href="#navigation">Navigation</a></li>
-				<li><a href="#viewwindow">View Window</a></li>
-				<li><a href="#tables">Tables</a></li>
-				<li><a href="#layoutsystems">Layout Systems</a></li>
-				<div class=" nav sub">
-					<ul>
-						<li><a href="#gridsystem"> - Grid System</a></li>
-						<li><a href="#flexsystem"> - Flex System</a></li>
-					</ul>
-				</div>
+			</div>
 
-				<li><a href="#figures">Figures</a></li>
-				<li><a href="#forms">Forms</a></li>
-
-				<div class=" nav sub">
-					<ul>
-						<li><a href="#inputs"> -Inputs</a></li>
-						<li><a href="#labels">  - Labels</a></li>
-						<li><a href="#controls"> -  Controls</a></li>
-						<li><a href="#buttons">  - Buttons</a></li>
-				</ul>
+			<div class="col-xs-12 col-sm-6" style="min-height:7em;">
+				<h3>Layout</h3>
+				<div class="nav">
+					
+					  <ul>
+					    <li><a href="#gridsystem">Grid System</a></li>
+					    <li><a href="#flexsystem">Flex System</a></li>
+					    <li><a href="#cards">Cards</a></li>
+					    <li><a href="#viewwindow">View Window</a></li>
+					    <li><a href="#figures">Figures</a></li>
+					  </ul>
 					
 				</div>
-				
-			</ul>
-				
 			</div>
+
+			<div class="col-xs-12 col-sm-6" style="min-height:7em;">
+				<h3>Navigation</h3>
+				<div class="nav">
+					  <ul>
+					    <li><a href="#basicnav">Basic Nav</a></li>
+					    <li><a href="#flexnav">Flex Nav</a></li>
+					    <li><a href="#stretchnav">Stretch Nav</a></li>
+					     <li><a href="#navpills">Nav Pills</a></li>
+					    <li><a href="#navcrumbs">Breadcrumbs</a></li>
+					    <li><a href="#materialnav">Material Nav</a></li>
+					  </ul>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6" style="min-height:7em;">
+				<h3>Components</h3>
+				<div class="nav">
+					  <ul>
+					    <li><a href="#buttons">Buttons</a></li>
+					    <li><a href="#inputs">Inputs & Labels</a></li>
+					    <li><a href="#search">Search</a></li>
+					    <li><a href="#select">Select</a></li>
+					    <li><a href="#checkboxes">Checkboxes & Toggles</a></li>
+					    <li><a href="#tables">Tables</a></li>
+					  </ul>
+				</div>
+			</div>
+
 		</div>
 	</div>
+</div>
 
 
-	<div class="container" id="typography">
+<div class="container" id="typography">
 
-		<h2 > Typography </h2>
-		<div class="card" >
+	<h2 > Typography </h2>
 
-			<h3 id="fontfamilies">Font Families</h3>
+	<div class="card" >
 
-			<div class="grid ">
-				<div class=" col-xs-12 col-lg-6 card medium">
-					<h1> Broadcre Regular 2</h1>
-				</div>
-				<div class="col-xs-12 col-lg-6 card medium flex-align-center">
-					<p> Cantarell Regular </p>
-				</div>
-				
+		<h3 id="fontfamilies">Font Families</h3>
+		<div class="grid ">
+			<div class=" col-xs-12 col-lg-6 card medium"><h1> Broadcre Regular 2</h1></div>
+			<div class="col-xs-12 col-lg-6 card medium flex-align-center"><p> Cantarell Regular </p></div>
+		</div>
+		<h3 id="headings"> Headings</h3>
+		<div class="card soft">
+			<h1>Heading - H1</h1>
+			<h2>Heading - H2</h2>
+			<h3>Heading - H3</h3>
+			<h4>Heading - H4</h4>
+			<h5>Heading - H5</h5>
+			<h6>Heading - H6</h6>
+		</div>
+
+		<h3 id="paragraphs">Paragraphs</h3>
+		<div class="card soft">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, id, quis. Quaerat qui in itaque eveniet amet dolorem dignissimos nesciunt, rem possimus ullam beatae quam doloribus quod quae quia ducimus.</p>
+
+			<p>Culpa, dignissimos sequi molestias, tenetur ab, reiciendis quasi fugit quo, repudiandae nulla delectus. Possimus tempora neque laudantium magnam, libero molestiae perferendis placeat ex soluta a facere quos voluptas, quidem similique.</p>
+
+			<p>Eum, dolorem delectus vel veniam cum, libero asperiores illum! Fuga aut, maiores totam excepturi nostrum, esse quisquam suscipit laudantium, ut repellendus nulla a, non est explicabo! Ratione voluptatem, explicabo tenetur?</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container" id="cards">
+	<h2> Cards</h2>
+	<div class="grid">
+		<div class="col-xs-12 col-md-4"> <div class="card">Card</div> </div>
+		<div class="col-xs-12 col-md-4"> <div class="card medium">Card Medium</div> </div>
+		<div class="col-xs-12 col-md-4"> <div class="card dark">Card Dark</div> </div>
+		<div class="col-xs-12 col-md-4"> <div class="card hard">Card Hard</div> </div>
+		<div class="col-xs-12 col-md-4"> <div class="card soft">Card Soft</div> </div>
+		<div class="col-xs-12 col-md-4"> <div class="card flat">Card Flat</div> </div>
+	</div>
+</div>
+
+
+<div class="container" id="navigation">
+	<h2> Navigation </h2>
+	<div class="card">
+	<script>
+		const makeNav = (classes='') => {
+			const links = ['home','store','about'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+			<div>
+				<nav class="${classes}">
+					<ul> ${links.reduce((r,o,i)=> {
+						return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`
+						},'')}
+					</ul>
+				</nav>
 			</div>
+		`);}
+	</script>
+
+	<h3 id="basicnav">Basic Nav</h3>
+	<div class="card soft"> <script>makeNav('nav') </script> </div>
+
+	<h3 id="flexnav">Flex Nav</h3>
+	<div class="card soft"> <script>makeNav('nav nav-flex')</script> </div>
+
+	<h3 id="stretchnav">Stretch Nav</h3>
+	<div class="card soft"> <script>makeNav('nav nav-stretch')</script> </div>
+	
+	<h3 id="navpills">Pills Nav</h3> <div class="card soft"> <script>makeNav('nav nav-pills')</script> </div>
+	
+	<h3 id="navcrumbs">Breadcrumb Nav</h3> <div class="card soft"> <script>makeNav('nav nav-crumbs sub')</script> </div>
+
+	<h3 id="materialnav">Material Nav</h3> <div class="card soft"> <script>makeNav('nav nav-material')</script> </div>
+
+	<script>
+		$("#navigation a").on("click",function(e){
+			e.preventDefault();
+			$(this).closest("li").addClass("active")
+			.siblings().removeClass("active")
+		})
+	</script>
+	</div>	
+</div>
+
+<div class="container" id="viewwindow">
+	<h2> View Window </h2>
+	<div class="card"> <div class="view-window" style="background-image: url('../img/terr.jpg')"></div> </div>
+</div>
+
+<div class="container" id="figures">
+	<h2> Figures </h2>
+
+	<div class="card">
+		<h3>Collection Grid</h3>
+		<div class="card soft">
+
+			<div class="grid gap trim-4">
+				<div class="col-xs-4 col-md-3">
+					<figure class="figure collection overlay">
+						<img src="../img/unsplash000.jpg" alt="placeholder">
+						<figcaption> Collection Name</figcaption>
+
+					</figure>
+				</div>
+
+				<div class="col-xs-4 col-md-3">
+					<figure class="figure collection overlay">
+						<img src="../img/unsplash003.jpg" alt="placeholder">
+						<figcaption> Collection Name</figcaption>
+
+					</figure>
+				</div>
+
+				<div class="col-xs-4 col-md-3">
+					<figure class="figure collection overlay">
+						<img src="../img/unsplash002.jpg" alt="placeholder">
+						<figcaption> Collection Name</figcaption>
+
+					</figure>
+				</div>
+
+				<div class="col-xs-4 col-sm-3">
+					<figure class="figure collection overlay">
+						<img src="../img/unsplash001.jpg" alt="placeholder">
+						<figcaption> Collection Name</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<h3>Product Overlay</h3>
+		<div class="card soft">
+
+			<div class="grid gap">
+					<div class="col-xs-12 col-md-4">
+						<figure class="figure product product-overlay">
+							<img src="../img/unsplash000.jpg" alt="placeholder">
+							<figcaption>
+								<div class="caption-body">
+									<div>Product Name</div>
+									<div>$40.00</div>
+									<div class="form-control"><button type="button" class="form-button-small">Add to cart</button></div>
+				</div>
+
+							</figcaption>
+						</figure>
+
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<figure class="figure product product-overlay">
+							<img src="../img/unsplash003.jpg" alt="placeholder">
+							<figcaption>
+								<div class="caption-body">
+									<div>Product Name</div>
+									<div>$40.00</div>
+
+								</div>
+							</figcaption>
+							<div class="card flat">
+								<div class="display-flex flex-align-center">
+									<div class="flex-stretch">
+										<h3>Curl care tips</h3>
+										<small class="form-text-helper" >Routines and early access to new drops.</small>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+
+						</figure>
+
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<figure class="figure product product-overlay">
+							<img src="../img/unsplash002.jpg" alt="placeholder">
+							<figcaption>
+								<div class="caption-body">
+									<div>Product Name</div>
+									<div>$40.00</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
 			
-			<h3 id="headings"> Headings</h3>
-			<div class="card hard">
-				<h1>Heading - H1</h1>
-				<h2>Heading - H2</h2>
-				<h3>Heading - H3</h3>
-				<h4>Heading - H4</h4>
-				<h5>Heading - H5</h5>
-				<h6>Heading - H6</h6>
-				
-			</div>
-
+		</div>
 		
 
-			<h3 id="paragraphs">Paragraphs</h3>
 
-			<div class="card hard">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, id, quis. Quaerat qui in itaque eveniet amet dolorem dignissimos nesciunt, rem possimus ullam beatae quam doloribus quod quae quia ducimus.</p>
-				<p>Culpa, dignissimos sequi molestias, tenetur ab, reiciendis quasi fugit quo, repudiandae nulla delectus. Possimus tempora neque laudantium magnam, libero molestiae perferendis placeat ex soluta a facere quos voluptas, quidem similique.</p>
-				<p>Eum, dolorem delectus vel veniam cum, libero asperiores illum! Fuga aut, maiores totam excepturi nostrum, esse quisquam suscipit laudantium, ut repellendus nulla a, non est explicabo! Ratione voluptatem, explicabo tenetur?</p>
-			</div>
-
-			
-		</div>
+		
+		
 	</div>
+	
+</div>
 
-	<div class="container" id="cards">
-
-		<h2> Cards</h2>
-
-
-			<div class="grid">
-				<div class="col-xs-12 col-md-4">
-					<div class="card">Card</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<div class="card medium">Card Medium</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<div class="card dark">Card Dark</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<div class="card hard">Card Hard</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<div class="card soft">Card Soft</div>
-				</div>
-				
-				<div class="col-xs-12 col-md-4">
-					<div class="card flat">Card Flat</div>
-				</div>
-			</div>
-	</div>
-
-	<div class="container" id="navigation">
-		<h2> Navigation </h2>
-		<div class="card">
-			<script>
-				const makeNav = (classes='') => {
-					const links = ['home','store','about'];
-
-					let ran = Math.floor(Math.random()*links.length);
-					document.write(`
-						<div>
-							<nav class="${classes}">
-								<ul>
-								${links.reduce((r,o,i)=> {
-									return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`
-									},'')}
-								</ul>
-							</nav>
-
-						</div>
-					`);
-				}
-			</script>
-
-			<div class="card hard">
-				<h3>Basic Nav</h3>
-				<script>makeNav('nav')</script>
-			</div>
-
-			<div class="card hard">
-				<h3>Flex Nav</h3>
-				<script>makeNav('nav nav-flex')</script>
-			</div>
-
-			<div class="card hard">
-				<h3>Stretch Nav</h3>
-				<script>makeNav('nav nav-stretch')</script>
-			</div>
-
-			<div class="card hard">
-				<h3>Pills Nav</h3>
-				<script>makeNav('nav nav-pills')</script>
-			</div>
-
-			<div class="card hard">
-				<h3>Breadcrumb Nav</h3>
-				<script>makeNav('nav nav-crumbs sub')</script>
-			</div>
-
-			<div class="card hard">
-				<h3>Material Nav</h3>
-				<script>makeNav('nav nav-material')</script>
-			</div>
-
-			<script>
-			$("#navigation a").on("click",function(e){
-					e.preventDefault();
-					$(this).closest("li").addClass("active")
-						.siblings().removeClass("active")
-			})
-			</script>
-		</div>	
-	</div>
-
-	<div class="container" id="viewwindow">
-		<h2> View Window </h2>
-		<div class="card">
-			<div class="view-window" style="background-image: url('../img/terr.jpg')"></div>
-		</div>
-	</div>
-
-	<div class="container" id="tables">
-
-		<script>
-			const makeTable = (classes='') => {
+<div class="container" id="tables">
+	<script>
+		const makeTable = (classes='') => {
 			const head = ['Item','Product','Size','Qty','Price'];
 			const body = [
 				['Curl Defining Cream',        '8 oz',  '1', '$24.00'],
@@ -236,134 +313,259 @@
 				['Deep Moisture Clay Mask',    '8 oz',  '2', '$56.00'],
 				['Leave-In Curl Refresher',    '6 oz',  '1', '$16.00'],
 				['Silk Satin Bonnet',          'One Size', '1', '$22.00'],
-				];
+			];
 
-				document.write(`
-				<table class="${classes}">
-					<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
-					<tbody>
-						${body.reduce((r,o,i)=>r+
-							`<tr>${
-								[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
-							}</tr>`,'')
-						}	
-					</tbody>
-				</table>
+			document.write(`
+			<table class="${classes}">
+				<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+				<tbody>
+					${body.reduce((r,o,i)=>r+
+						`<tr>${
+							[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+							}</tr>`,'')}	
+				</tbody>
+			</table>
 			`	);} 
+	</script>
+
+	<h2> Tables </h2>
+	<div class="card ">
+		<h3>Lined Horizontal</h3>
+		<div class="card soft"> <script>makeTable("table lined horizontal")</script> </div>
+	</div>
+</div>
+
+<div class="container" id="layoutsystems">
+	<h2>Layout Systems</h2>
+	<div class="card">
+		<h3 id="flexsystem">Flex System</h3>
+
+		<div class="card soft">
+			<div class="display-flex"> 
+				<div class="card dark flex-none col-xs-2"> 
+					<h4>Fixed</h4>
+					<p>flex-none</p>
+				</div>
+				<div class="card hard flex-stretch">
+					<h4>Stretch</h4>
+					<p>flex-stretch fills the remaining space.</p>
+				</div>
+			</div>
+			<div class="display-flex flex-justify-center flex-align-center">
+				<div class="card medium flex-non col-xs-3" >
+					<h4>Centered</h4>
+					<p>flex-justify-center + flex-align-center</p>
+				</div>
+			</div>
+		</div>
+
+		<h3 id="gridsystem">Grid System</h3>
+		<div class="card soft">
+			<div class="grid gap">
+				<div class="card hard col-xs-6">6 columns</div>
+				<div class="card hard col-xs-6">6 columns</div>
+				<div class="card medium col-xs-12 col-md-4">4 columns</div>
+				<div class="card medium col-xs-12 col-md-4">4 columns</div>
+				<div class="card medium col-xs-12 col-md-4">4 columns</div>
+				<div class="card dark col-xs-12 col-md-8">8 columns</div>
+				<div class="card dark col-xs-12 col-md-4">4 columns</div>
+			</div>
+			<div class="grid gap">
+				<div class="card hard col-xs-12 col-md-6 col-lg-4">Dynamic</div>
+				<div class="card hard col-xs-12 col-md-6 col-lg-4">Dynamic</div>
+				<div class="card hard col-xs-12 col-md-12 col-lg-4">Dynamic</div>
+			</div>
+			<!-- 10-column variant -->
+			<div class="grid ten gap">
+				<div class="card medium col-xs-12 col-md-2">2 columns</div>
+				<div class="card medium col-xs-12 col-md-5">5 columns</div>
+				<div class="card medium col-xs-12 col-md-3" >3 columns</div>
+			</div>
+		</div> 
+	</div>
+</div>
+
+<div class="container" id="forms">
+	<script>
+			$(".form-button").on("click", function (e) {
+				e.preventDefault();
+				$(this).closest(".card").find(".form-button").removeClass("active");
+				$(this).addClass("active");
+			});
 		</script>
 
-		<h2> Tables </h2>
+	<h2>Forms</h2>
 
-		<div class="card">
-			<div class="card hard">
-				<h3>Lined Horizontal</h3>
-				<script>makeTable("table lined horizontal")</script>
+	<div class="card">
+
+		<h3 id="inputs">Inputs &amp; Labels</h3>
+
+		<div class="card soft">
+			<div class="form-control">
+				<label class="form-label" for="email-default">Email address *</label>
+				<input id="email-default" type="email" placeholder="name@example.com" class="form-input" >
+				<small class="form-text-helper">We'll send your order confirmation here.</small>
 			</div>
-	</div>
+
+			<div class="form-control">
+				<label class="form-label" for="email-default">Email address *</label>
+				<input id="email-default" type="email" placeholder="name@example.com" class="form-input" >
+				<small class="form-text-invaild"> &#9888; Please enter a valid email address.</small>
+			</div>
 
 
-	<div class="container" id="layoutsystems">
-	  <h2>Layout Systems</h2>
+			<div class="form-control">
+				<label class="form-label" for="email-default">Email address *</label>
+				<input id="email-default" type="email" placeholder="name@example.com" class="form-input" >
+				<small class="form-text-vaild"> &#10003; Looks Good!</small>
+			</div>
 
-	  <div class="card">
-	  	<h3 id="flexsystem">Flex System</h3>
-
-	  	<div class="card hard">
-
-	  		<div class="display-flex">
-	  			<div class="card dark flex-none col-xs-2">
-	  				<h4>Fixed</h4>
-	  				 <p>flex-none</p>
-	  			</div>
-
-	  			<div class="card hard flex-stretch">
-	  				<h4>Stretch</h4>
-	  				<p>flex-stretch fills the remaining space.</p>
-	  			</div>
-	  		</div>
-	  		<div class="display-flex flex-justify-center flex-align-center">
-	  			<div class="card medium flex-non col-xs-3" >
-	  			 <h4>Centered</h4>
-	  			 <p>flex-justify-center + flex-align-center</p>
-	  			</div>
-	  		</div>
-	  		
-
-	  	</div>
-	  	
-
-	  	<h3 id="gridsystem">Grid System</h3>
-
-	  	<div class="card hard">
-	  			<div class="grid gap">
-	  			    <div class="card soft col-xs-6">6 columns</div>
-	  			    <div class="card soft col-xs-6">6 columns</div>
-	  			    <div class="card medium col-xs-12 col-md-4">4 columns</div>
-	  			    <div class="card medium col-xs-12 col-md-4">4 columns</div>
-	  			    <div class="card medium col-xs-12 col-md-4">4 columns</div>
-
-	  			    <div class="card dark col-xs-12 col-md-8">8 columns</div>
-	  			    <div class="card dark col-xs-12 col-md-4">4 columns</div>
-	  			</div>
-
-	  			<div class="grid gap">
-	  			    <div class="card hard col-xs-12 col-md-6 col-lg-4">Dynamic</div>
-	  			    <div class="card hard col-xs-12 col-md-6 col-lg-4">Dynamic</div>
-	  			    <div class="card hard col-xs-12 col-md-12 col-lg-4">Dynamic</div>
-	  			  </div>
-
-	  			  <!-- 10-column variant -->
-	  			  <div class="grid ten gap">
-	  			    <div class="card medium col-xs-12 col-md-2">2 columns</div>
-	  			    <div class="card medium col-xs-12 col-md-5">5 columns</div>
-	  			    <div class="card medium col-xs-12 col-md-3" >3 columns</div>
-	  			  </div>
-	  		</div> 
-	  	</div>
-	</div>
-
-	<div class="container">
-
-		<h2 id="basic-variations">Forms & Warnings</h2>
-
-		<div class="card hard">
 			
-			<h3>Required w/ Warings</h3>
-			<div class="form-control">
-				<label class="form-label" for="name-req">Full name *</label>
-				<input id="name-req" type="text" placeholder="Name" class="form-input" required>
-			</div>
 
-			<div class="form-control">
-				<label class="form-label" for="email-err">Email</label>
-				<input id="email-err" type="email" value="name@.com" class="form-input">
-				<small style="color: var(--color-main-dark);"> &#9888; Please enter a valid email address</small>
-			</div>
-
-			<div class="form-control">
-				<label class="form-label" for="email-ok">Email</label>
-				<input id="email-ok" type="email" value="jane@example.com" class="form-input" aria-describedby="email-ok-msg">
-				<small style="color: var(--color-secondary-dark);"> &#10003; Looks good</small>
-			</div>
 
 			<div class="form-control display-flex flex-align-center">
 				<div class="flex-stretch">
-					<input type="email" placeholder="Email" class="form-input">
+					<input type="email" placeholder="Enter your email" class="form-input">
 				</div>
+				
 				<div class="flex-none">
 					<button type="submit" class="form-button">Subscribe</button>
 				</div>
-				
+			</div>
+		</div>
+
+		<h3 id="buttons">Buttons</h3>
+
+		<script>
+			$(".form-button").on("click", function (e) {
+				e.preventDefault();
+				$(this).closest(".card").find(".form-button").removeClass("active");
+				$(this).addClass("active");
+			});
+		</script>
+
+		<div class="card soft">
+				<div class="form-control">
+					<button type="button" class="form-button">Add to cart</button>
+				</div>
+				<div class="form-control">
+					<a href="#inputs" class="form-button">Continue shopping</a>
+				</div>
+		</div>
+
+		<h3 id="search">Hotdog</h3>
+		<div class="card soft">
+			<div class="form-control">
+				<div class="hotdog  flex-align-center">
+					<span class="hotdog-icon">&#8981;</span>
+					<input type="search" placeholder="Search creams, masks, bonnets">
+				</div>
+			</div>
+			<div class="form-control">
+				<div class="hotdog fill flex-align-center">
+					<span class="hotdog-icon">&#8981;</span>
+					<input type="search" placeholder="Search creams, masks, bonnets">
+				</div>
+			</div>
+		</div>
+
+		<h3 id="select">Select</h3>
+		<div class="card soft">
+
+			<div class="form-select">
+				<select >
+					<option>Sort by</option>
+					<option>Best selling</option>
+					<option>Newest</option>
+					<option>Price: low to high</option>
+					<option>Price: high to low</option>
+				</select>
 			</div>
 
+			<div class="card flat"></div>
+
+			<div class="display-flex">
+				<div class="flex-stretch"></div>
+				<div class="flex-none">
+					<div class="form-select">
+						<select>
+							<option>Select a rating</option>
+							<option>5 Stars</option>
+							<option>4 Stars &amp; up</option>
+							<option>3 Stars &amp; up</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h3 id="checkboxes"> Checkboxes </h3>
+
+		<div class="card soft">
+
+			<div class="grid">
+
+				<div class="card soft  col-xs-12 col-md-6">
+					<div class="display-flex flex-align-center">
+						<div class="flex-stretch">
+							<h3>Curl Defining Cream</h3>
+							<small class="form-text-vaild">8 oz &middot; $24.00</small>
+						</div>
+						<div class="flex-none favorite">
+							<input type="checkbox" id="favorite-curl-cream" class="hidden">
+							<label for="favorite-curl-cream">&hearts;</label>
+						</div>
+					</div>
+				</div>
+				<div class="card dark  col-xs-12 col-md-6">
+					<div class="display-flex flex-align-center">
+						<div class="flex-stretch">
+							<h3>Subscribe &amp; save</h3>
+							<small class="form-text-helper">Ships every 6 weeks. Cancel anytime.</small>
+						</div>
+						<div class="flex-none toggle">
+							<input type="checkbox" id="toggle-subscribe" class="hidden">
+							<label for="toggle-subscribe"></label>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="card soft col-xs-12 col-md-6">
+					<div class="display-flex flex-align-center">
+						<div class="flex-stretch">
+							<h3>Silk Satin Bonnet</h3>
+							<small class="form-text-vaild">One size &middot; $22.00</small>
+						</div>
+						<div class="flex-none favorite">
+							<input type="checkbox" id="favorite-bonnet" class="hidden">
+							<label for="favorite-bonnet">&hearts;</label>
+						</div>
+					</div>
+					
+				</div>
+				<div class="card medium col-xs-12 col-md-6">
+					<div class="display-flex flex-align-center">
+						<div class="flex-stretch">
+							<h3>Curl care tips</h3>
+							<small class="form-text-helper" >Routines and early access to new drops.</small>
+						</div>
+						<div class="flex-none toggle">
+							<input type="checkbox" id="toggle-tips" class="hidden">
+							<label for="toggle-tips"></label>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 
 		</div>
 	</div>
+</div>
+
+
 
 </body>
-
-
-
 </html>
 
 
