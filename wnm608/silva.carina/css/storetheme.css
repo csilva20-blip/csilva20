@@ -82,7 +82,6 @@ a:hover {
 
 .figure.product {
 
-	border-radius: 0.5em;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 
@@ -95,44 +94,83 @@ a:hover {
 }
 
 .product-overlay figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(29, 54, 90, 0.6);
-	opacity: 0;
-	transition: all 0.3s;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
 }
 
 .product-overlay:hover figcaption {
-	opacity: 1;
+	opacity: 0;
+	transition: all 0.2s;
+
 }
 
 .product-overlay .caption-body {
-	background-color: white;
-	border-radius: 0.5em;
-	padding: 1em;
-	transform: translateY(2em);
-	transition: all 0.3s;
+
+
 }
 
 .product-overlay:hover .caption-body {
-	transform: translateY(0);
+
 }
 
 .product-overlay img {
 	transform: scale(1,1);
-	transition: all 0.3s;
+	transition: all 0.6s;
 }
 
 .product-overlay:hover img {
 	
 	transform: scale(1.4, 1.4);
 }
+
+
+.figure.product .product-media {
+	position: relative;
+	overflow: hidden;
+}
+
+
+.figure.product:hover figcaption {
+	opacity: 1;
+}
+
+
+.product-small {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-top: 0.75rem;
+	padding-top: 0.5rem;
+	border-top: 1px solid var(--color-neutral-light, #e5e5e5);
+}
+
+.product-size-oz {
+	color: var(--color-neutral-medium);
+	font-size: 0.875rem;
+}
+
+.product-price {
+	font-weight: 600;
+}
+
+.form-button.add-to-cart {
+	position: absolute;
+	left: 1rem;
+	right: 1rem;
+	bottom: 1rem;
+	width: auto;
+	z-index: 2;
+	opacity: 0;
+	transform: translateY(12px);
+	transition: opacity 0.3s, transform 0.5s,background-color 0.4s, color 0.4s;
+
+}
+
+.figure.product:hover .add-to-cart,
+.add-to-cart:focus-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 
 /* ==========================================================================
    Checkboxes  
@@ -150,10 +188,6 @@ a:hover {
    	color: var(--color-main-medium);
    	transform: scale(2, 2);
    }
-
-
-
-
 
 
 /* ==========================================================================

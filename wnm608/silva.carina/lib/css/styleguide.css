@@ -156,7 +156,8 @@ a:hover {
 .flex-none { flex: none}
 
 
-.flex-align-center { align-items:center } /* up and down */
+.flex-align-center { align-items:center; } /* up and down */
+.flex-align-end {align-items: flex-end;}
 .flex-justify-center { justify-content:center; } /* left and right */
 
 .hidden { display: none; }
@@ -363,6 +364,23 @@ a:hover {
 		padding: 0;
 	}
 
+	.color-grid {
+		display: flex;
+		align-items: flex-end;
+		height: 6em;
+		padding: 0.5em;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		letter-spacing: 0.05em;
+		color: var(--color-neutral-dark);
+	}
+
+	.color-grid.light {
+		color: var(--color-neutral-light);
+
+	}
+
+
 /* ==========================================================================
    VIEW WINDOW 
    ========================================================================== */
@@ -528,14 +546,28 @@ a:hover {
    ========================================================================== */
 
 .figure {
-	margin:0;
+	--figure-ratio: auto;
+
+	margin: 0;
 	background-color: var(--color-white);
+	border-radius: var(--figure-radius);
+	overflow: hidden;
 }
 
 .figure img {
-	width:100%;
-	vertical-align: text-bottom;
+	display: block;           /* removes the gap under the image */
+	width: 100%;
+	height: auto;
+	aspect-ratio: var(--figure-ratio);
+	object-fit: cover;
 }
+
+/* ---- Modifiers ---- */
+
+
+.figure.ratio-4-5 { --figure-ratio: 4 / 5; }
+.figure.ratio-1-1 { --figure-ratio: 1 / 1; }
+.figure.ratio-3-2 { --figure-ratio: 3 / 2; }
 
 .figure figcaption {
 	padding: 1em; 
