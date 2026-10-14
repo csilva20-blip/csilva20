@@ -5,7 +5,6 @@
 
 :root {
 
-
 	--font-serif: "Broadacre Light 2", Georgia, "Times New Roman", serif;/* Choose any font - gracefully degrade! */
 	--font-sans-serif: "cantarell", "geologica-variable", Helvetica, Arial, sans-serif;
 
@@ -71,9 +70,11 @@ a:hover {
    Collection Figures 
    ========================================================================== */
 
-   .figure.collection {
-	overflow: hidden;
-}
+  .figure.collection {
+
+   overflow: hidden;
+   
+  }
 
 /* ==========================================================================
    Product Figures
@@ -87,28 +88,14 @@ a:hover {
 
 }
 
-
 .product-overlay {
 	position: relative;
 	overflow: hidden;
 }
 
-.product-overlay figcaption {
-
-}
-
 .product-overlay:hover figcaption {
 	opacity: 0;
 	transition: all 0.2s;
-
-}
-
-.product-overlay .caption-body {
-
-
-}
-
-.product-overlay:hover .caption-body {
 
 }
 
@@ -128,11 +115,9 @@ a:hover {
 	overflow: hidden;
 }
 
-
 .figure.product:hover figcaption {
 	opacity: 1;
 }
-
 
 .product-small {
 	display: flex;
@@ -170,7 +155,6 @@ a:hover {
 	opacity: 1;
 	transform: translateY(0);
 }
-
 
 /* ==========================================================================
    Checkboxes  
