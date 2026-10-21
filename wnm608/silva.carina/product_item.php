@@ -14,14 +14,23 @@
 
 	<?php include "sections/navbar.php";?>
 
+	<?php
+	include "lib/php/products.php";
 
+	$product = $products[$_GET['id']];  
+	?>
 
 	<div class="container">
 		<div class="card">
-			<h2>Product Item</h2>
+		
+		<?php if ($product) { ?>
+			<h2><?= $product['name'] ?></h2>
+			<p><?= $product['size'] ?> &middot; $<?= $product['price'] ?></p>
+			<a href="cart.php?id=<?= $product['id'] ?>" class="form-button">Add to Cart</a>
 
-			<p>This is item #</p>
-
+		<?php } else { ?>
+			<p>Product not found.</p>
+		<?php } ?>
 
 		</div>
 	</div>
