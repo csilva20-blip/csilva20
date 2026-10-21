@@ -71,9 +71,15 @@
 	//SuperGlobals php.net - predefined arrays 
 	// ?name=exmaplename
 
+	echo "<a href='?name=exmaplename'>visit</a>";
+
+	echo "<br>";
 	echo "<div>My name is {$_GET['name']} </div>";
 
 	// ?name=Joey&type=textarea
+
+	echo "<a href='?name=Joey&type=textarea'>visit</a>";
+	echo "<br>";
 
 	echo "<{$_GET['type']}> My name is {$_GET['name']} </{$_GET['type']}>";
 
@@ -118,7 +124,6 @@
 	echo $colorsAssociative['green'];
 
 	?>
-
 		<hr>
 
 	<?php
@@ -133,6 +138,58 @@
 	$d = $c*1;
 
 	$colorsObject = (object)$colorsAssociative;
+
+	echo "<hr>"; 
+
+	// Array Index Notation
+
+	echo $colors[0]."<br>";
+	echo $colorsAssociative['red']."<br>";
+
+	echo $colorsAssociative[$colors[0]]."<br>";
+
+	//object property Notation 
+
+	echo $colorsObject ->red."<br>";
+	echo $colorsObject ->{$colors[0]}."<br>";
+
+
+	?>
+
+	<hr>
+
+	<?php
+
+	//How to print arrays
+
+	print_r($colors);
+
+	echo "<hr>"; 
+
+	print_r($colorsAssociative);
+
+	echo "<hr>";
+
+	echo "<pre>",print_r($colorsObject),"</pre>";
+
+
+	echo "<hr>";
+
+
+
+	
+
+	//Function 
+
+	function print_p($v) {
+
+		echo "<pre>",print_r($v),"</pre>";
+	}
+
+	print_p($_GET);
+
+
+
 
 
 
