@@ -17,7 +17,17 @@
 	<?php
 	include "lib/php/products.php";
 
-	$product = $products[$_GET['id']];  
+	$product = null;
+	$id = $_GET['id'] ?? null;
+
+	if ($id !== null) {
+		foreach ($products as $p) {
+			if ($p['id'] == $id) {
+				$product = $p;
+				break;
+			}
+		}
+	}
 	?>
 
 	<div class="container">
