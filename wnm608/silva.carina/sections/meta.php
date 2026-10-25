@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 
+<base href="https://carinasilvaportfolio.com/csilva20/wnm608/silva.carina/">
+
 <link rel="stylesheet" href="https://use.typekit.net/wwn7kyq.css">
 <link rel="stylesheet" href="lib/css/styleguide.css">
 <link rel="stylesheet" href="lib/css/gridsystem.css">

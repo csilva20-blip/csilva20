@@ -1,0 +1,11 @@
+{
+	"notes":[
+
+		"JSON files always start witn an array [] or an obeject {} - these files cannot have comments...", 
+		"I can write comments in the array.", 
+		"commas will separate array items.", 
+		"all property names MUST be in DOUBLE quotation marks", 
+		"I can use a linter - like JSONlint.com"
+
+	]
+}
