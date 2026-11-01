@@ -29,42 +29,48 @@ echo <<<HTML
 	<h3> Edit User Information </h3>
 
 	<div class="card hard">	
-		<div class="form-control">
-			<div>
-				<label class="form-label" for="users-name">Name</label>
-				<input class="form-input" type="text" id="users-name" name="name" value="$user->name">
+
+		<form method="post" action="">
+			<div class="form-control">
+				<div>
+					<label class="form-label" for="user-name">Name</label>
+					<input class="form-input" name="user-name" id="user-name" type="text" value="$user->name" placeholder="Enter User First and Last name">
+				</div>
 			</div>
-		</div>
 
-		<div class=form-control>
-			<div class="form-select">
-				<label class="form-label">User Type</label>
-				<select id="users-type" name="type"> $typeOptions </select>
+			<div class=form-control>
+				<div class="form-select">
+					<label class="form-label" for="user-type">User Type</label>
+					<select class="form-select" name="user-type" id="user-type" type="select"> $typeOptions </select>
+				</div>
 			</div>
-		</div>
 
-		<div class="form-control">
-			<label class="form-label" for="email-default">Email address</label>
-			<input id="email-default" type="email" value="$user->email" class="form-input" >
-			<small class="form-text-vaild"> &#10003; Looks Good!</small>
-		</div>
+			<div class="form-control">
+				<label class="form-label" for="user-email">Email address</label>
+				<input class="form-input" name="user-email" id="user-email" type="email" value="$user->email" placeholder="Enter User Email">
 
-		<div class="form-control ">
+				 <!-- Need to adjust to make dynamic -->
+				<small class="form-text-vaild"> &#10003; Looks Good!</small>
+			</div>
 
-		            <label class="form-label" for="email-default">Classes</label>
+			<div class="form-control ">
 
-		            <div class="display-flex flex-align-center">
-		                <div class="flex-stretch">
-		                    <input type="email" placeholder="$classes" class="form-input">
-		                </div>
+			            <label class="form-label" for="user-classes">Classes</label>
+			            <div class="display-flex flex-align-center">
+			                <div class="flex-stretch">
+			                    <input class="form-input" name="user-classes" id="user-classes" type="text" value="$classes" placeholder="001 ,002 ,003 ,etc.">
+			                </div>
 
-		                <div class="flex-none">
-		                    <button type="submit" class="form-button">Save</button>
-		                </div>
+			                <div class="flex-none">
+			                    <input class="form-button" type="submit" value="save changes"></input>
+			                </div>
 
-		            </div>
+			            </div>
 
-		        </div>
+			        </div>
+		</form>
+
+
 
 
 </div>
