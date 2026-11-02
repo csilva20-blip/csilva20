@@ -2,13 +2,64 @@
 
 include "../lib/php/functions.php";
 
-$users = file_get_json("../data/users.json");
 
+$filename = "../data/users.json";
+$users = file_get_json($filename);
+
+$empty_user = (object)[
+	"name"=>"",
+	"type"=>"",
+	"email"=>"",
+	"classes"=>[]
+]; 
+
+
+//file_put_contents json_encode explore $_POST 
+// CRUD, Create Read Update Delete 
+
+
+if(isset($_GET['action'])) {
+	switch ($_GET['action']) {
+		case 'update':
+			$users[$_GET['id']]->name = $_POST['user-name'];
+			$users[$_GET['id']]->type = $_POST['user-type'];
+			$users[$_GET['id']]->email =  $_POST['user-email'];
+			$users[$_GET['id']]->classes =  explode(", ", $_POST['user-classes']);
+
+			file_put_contents($filename, json_encode($users));
+			header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+			break;
+
+		case 'create':
+			$empty_user->name = $_POST['user-name'];
+			$empty_user->type = $_POST['user-type'];
+			$empty_user->email = $_POST['user-email'];
+			$empty_user->classes =  explode(", ", $_POST['user-classes']);
+
+			$id = count($users); 
+
+
+			$users[] = $empty_user; 
+
+			file_put_contents($filename, json_encode($users));
+			header("location:{$_SERVER['PHP_SELF']}?id=$id");
+			break;
+
+		case 'delete':
+			// code...
+			break;
+
+	}
+}
 
 function showUserPage($user) {
 
-$classes = implode(",",$user->classes);
+$id = $_GET['id'];
+$addoredit = $id == "new" ? "add" : "edit"; 
+$createorupdate = $id == "new" ? "create" : "update";
 
+
+$classes = implode(",",$user->classes);
 $allUsers = file_get_json("../data/users.json");
 $typeOptions = getTypeOptions($allUsers, $user->type);
 
@@ -30,7 +81,9 @@ echo <<<HTML
 
 	<div class="card hard">	
 
-		<form method="post" action="">
+		<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+
+			<h2> $addoredit User </h2>
 			<div class="form-control">
 				<div>
 					<label class="form-label" for="user-name">Name</label>
@@ -106,7 +159,8 @@ HTML;
 			<div class="flex-stretch"></div>
 			<nav class="nav nav-flex flex-none">
 				<ul>
-					<li><a href="admin/users.php">User List</a></li>
+					<li><a href="<?=$_SERVER['PHP_SELF']?>">User List</a></li>
+					<li><a href="<?=$_SERVER['PHP_SELF']?>?id=new">Add New User</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -120,10 +174,10 @@ HTML;
 
 			<?php
 
-			if (isset($_GET['id'])) {
-				//echo "user";
 
-				showUserPage($users[$_GET['id']]);
+			if (isset($_GET['id'])) {
+
+				showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
 
 			} else {
 
@@ -137,15 +191,12 @@ HTML;
 							"<li>
 								<a href='admin/users.php?id=$i'> {$users[$i]->name}</a>
 							</li>";
-
-					}
+						}
 					?>
-					
 				</ul>
-				
 			</nav>
 
-		<?php } ?>
+			<?php } ?>
 
 			
 
