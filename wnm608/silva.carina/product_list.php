@@ -17,12 +17,31 @@
 		<div class="card">
 			<h2>Product List</h2>
 
-			<div class="grid gap">
-				<?php $product = $products["01"]; include "sections/product_card.php"; ?>
-				<?php $product = $products["02"]; include "sections/product_card.php"; ?>
-				<?php $product = $products["03"]; include "sections/product_card.php"; ?>
-				<?php $product = $products["04"]; include "sections/product_card.php"; ?>
-			</div>
+
+			<?php 
+
+			include_once "lib/php/functions.php";
+			include_once "sections/templates.php";
+
+
+			$result = makeQuery(
+				makeConn(),
+				"
+
+				SELECT *
+				FROM `products`
+				ORDER BY `price` DESC
+
+
+				"
+			);
+			
+			echo "<div class='productlist grid gap'>",array_reduce($result,'productsListTemplate'),"</div>";
+
+
+
+			?>
+
 		</div>
 	</div>
 

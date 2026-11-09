@@ -156,6 +156,8 @@ a:hover {
 .flex-align-end {align-items: flex-end;}
 .flex-justify-center { justify-content:center; } /* left and right */
 
+.flex-column { flex-direction: column; }
+
 .hidden { display: none; }
 
 
