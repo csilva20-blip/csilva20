@@ -3,7 +3,7 @@
 function productsListTemplate($r,$o) {
 	return $r.<<<HTML
 
-	<div class="col-xs-12 col-md-4">
+	<a class="col-xs-12 col-md-4" href="product_item.php?id=$o->id">
 		<figure class="figure product product-overlay ratio-4-5 display-flex flex-column">
 			<div class="product-media flex-none">
 				<img src="img/$o->thumb_image_url" alt="">
@@ -22,7 +22,7 @@ function productsListTemplate($r,$o) {
 				</div>
 			</figcaption>
 		</figure>
-	</div>
+	</a>
 
 HTML;
 
