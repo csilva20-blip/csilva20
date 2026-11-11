@@ -4,7 +4,7 @@ include_once "lib/php/functions.php";
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-print_p($product);
+// print_p($product);
 
 
 $images = explode (",", $product->images); 
@@ -21,6 +21,8 @@ $image_elements = array_reduce($images, function($r,$o){
 
 	<?php include "sections/meta.php"; ?>
 
+	<script src="js/product_thumbnails.js"></script>
+
 </head>
 
 <body>
@@ -32,19 +34,14 @@ $image_elements = array_reduce($images, function($r,$o){
 		<div class="card">
 			<div class="grid gap">
 				<div class="col-xs-3 col-md-1">
-					<div class="product-item-info-block figure ratio-1-1">
+					<div class="images-main figure ratio-1-1">
 						<img src="img/<?= $product->thumb_image_url?>" alt="alt text placeholder">
 					</div>
-					<div class="product-item-info-block figure ratio-1-1">
-						<img src="img/<?= $product->thumb_image_url?>" alt="alt text placeholder">
-					</div>
-					<!-- 
 
-					<div class="product-item-info-block figure ratio-1-1">
-						quick php $image_elements quick php
+					<div class=" images-thumbs figure ratio-1-1">
+						<?=$image_elements?>
 					</div>
 
-					 -->
 
 					
 				</div>

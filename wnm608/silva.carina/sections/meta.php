@@ -10,3 +10,5 @@
 <link rel="stylesheet" href="lib/css/styleguide.css">
 <link rel="stylesheet" href="lib/css/gridsystem.css">
 <link rel="stylesheet" href="css/storetheme.css">
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
