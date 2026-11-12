@@ -375,6 +375,33 @@ a:hover {
 
 	}
 
+	/* ==========================================================================
+   Product Information
+   ========================================================================== */
+
+
+   .card-section {
+   	padding: 1em;
+   }
+
+   .card-section~.card-section {
+   	border-top: 1px solid var(--color-neutral-light);
+
+
+   }
+
+
+   .card-section h2 {
+   	font-size: 2em;
+   }
+
+   .card-section img {
+   	padding: 0;
+   	padding-bottom: 0.1em;
+   }
+
+
+
 
 /* ==========================================================================
    VIEW WINDOW 

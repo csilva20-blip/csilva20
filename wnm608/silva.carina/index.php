@@ -26,15 +26,7 @@
 			<h3>Shop by collection</h3>
 
 			<?php include "sections/collection_grid.php"; ?>
-
-
-		</div>
-
-		<div class="card">
-			<h3>Featured products</h3>
-
-			<?php include "sections/featured_product_list.php"?>
-
+			
 		</div>
 	</div>
 

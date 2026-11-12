@@ -10,8 +10,8 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
 $images = explode (",", $product->images); 
 
 $image_elements = array_reduce($images, function($r,$o){
-	return $r."<img src='img/$o'>";
-})
+    return $r."<img src='img/$o'>";
+}, "");
 
 
 ?><!DOCTYPE html>
@@ -34,56 +34,80 @@ $image_elements = array_reduce($images, function($r,$o){
 		<div class="card">
 			<div class="grid gap">
 				<div class="col-xs-3 col-md-1">
-					<div class="images-main figure ratio-1-1">
+					<div class="images-thumbs figure ratio-1-1">
 						<img src="img/<?= $product->thumb_image_url?>" alt="alt text placeholder">
 					</div>
 
 					<div class=" images-thumbs figure ratio-1-1">
 						<?=$image_elements?>
 					</div>
-
-
-					
 				</div>
 
 				<div class="col-xs-9 col-md-6">
-					<figure class="figure ratio-4-5"><img src="img/<?= $product->thumb_image_url?>" alt=""></figure>
+					<figure class=" figure ratio-4-5 images-main"><img src="img/<?= $product->thumb_image_url?>" alt=""></figure>
 				</div>
 
 				<div class="col-xs-12 col-md-5">
-					<div class="product-item-info-block "><h2><?= $product->title ?></h2></div>
-					<div class="product-item-info-block "><h3>$<?= $product->price ?></h3></div>
-					<div class=" product-item-info-block"><?= $product->collection ?></div>
-					
-
-					<form action="cart.php">
-						<div class="grid gap form-control">
-							<div class="col-xs-4">
-								<div class="form-select">
-									<select aria-label="Quantity">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="col-xs-8">
-								<div class="form-select">
-									<select aria-label="Size">
-										<option>8 oz</option>
-										<option>12 oz</option>
-									</select>
-								</div>
-							</div>
+					<div class="card flat">
+						<div class="card-section">
+							<h2><?= $product->title ?></h2>
+							<h3>$<?= $product->price ?></h3>
 						</div>
 
-						<div class="form-control">
-							<a href="cart.php?id=<?= $product->id ?>" class="form-button">Add to Cart</a>
-						</div>
-					</form>
+						<div class="card-section"><?= $product->collection ?></div>
+						
+						<form action="cart.php">
+							<div class="grid gap form-control">
+								<div class="col-xs-4">
+									<label for="product-amount" class="form-label">Amount</label>
+									<div class="form-select" id="product-amount">
+										<select aria-label="Quantity">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+									</div>
+								</div>
 
+								<!-- FIX -->
+
+								<div class="col-xs-8">
+									<label for="product-size" class="form-label">Size</label>
+									<div class="form-select">
+										<select aria-label="Size">
+											<option>8 oz</option>
+											<option>12 oz</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- FIX -->
+
+							</div>
+
+							<div class="form-control">
+								<a href="cart.php?id=<?=$product->id ?>" class="form-button">Add to Cart</a>
+							</div>
+						</form>
+
+						<div class="card-section product-description">
+							<h3>Product Description</h3>
+							 <p><?= $product->description ?></p>
+							
+						</div>
+
+					</div>
 				</div>
+
+				<div class="col-xs-12 col-md-5"></div>
+
 			</div>
 		</div>
 
