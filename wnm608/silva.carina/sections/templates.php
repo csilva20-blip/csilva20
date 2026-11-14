@@ -39,7 +39,6 @@ function cartListTemplate($r, $o) {
                 <img src="img/$o->thumb_image_url" alt="$o->title">
             </figure>
         </td>
-        
         <td>
             <a href="product_item.php?id=$o->id">$o->title</a>
         </td>
