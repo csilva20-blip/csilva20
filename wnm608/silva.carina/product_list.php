@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+	include_once "lib/php/functions.php";
+	include_once "sections/templates.php";
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -10,7 +16,6 @@
 <body>
 
 	<?php include "sections/navbar.php"; ?>
-
 	<?php include "lib/php/products.php"; ?>
 
 	<div class="container">
@@ -20,10 +25,6 @@
 
 			<?php 
 
-			include_once "lib/php/functions.php";
-			include_once "sections/templates.php";
-
-
 			$result = makeQuery(
 				makeConn(),
 				"
@@ -32,13 +33,10 @@
 				FROM `products`
 				ORDER BY `price` DESC
 
-
 				"
 			);
 			
 			echo "<div class='productlist grid gap'>",array_reduce($result,'productsListTemplate'),"</div>";
-
-
 
 			?>
 
