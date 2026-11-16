@@ -2,13 +2,10 @@
 <?php
 include_once "lib/php/functions.php";
 
-$id = (int) ($_GET['id'] ?? 0);
-$results = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = $id");
-$product = $results[0] ?? null; 
+$cart_items = getCartItems();
+$cart_total = array_reduce($cart_items, function($r,$o){return $r + $o->total;}, 0);
 
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,7 +23,7 @@ $product = $results[0] ?? null;
                 <hr>
                 <h3>Address</h3>
 
-                <form class="form">
+                <form class="form" method="post" action="confirmation.php">
                     <div class="form-control">
                         <label for="address-street" class="form-label"> Street </label>
                         <input id="address-street"type="text"placeholder="Street Name"class="form-input">
@@ -100,11 +97,12 @@ $product = $results[0] ?? null;
 
                 <h2>Your Cart</h2>
 
-                <?php if ($product) { ?>
-                    <p> Order summary: <?= htmlspecialchars($product->title) ?> &middot; <?= htmlspecialchars($product->size) ?></p>
-                    <p> Total: $<?= number_format((float)$product->price, 2) ?></p>
-                    <a href="confirmation.php?id=<?= (int)$product->id ?>" class="form-button">
-                        Place order</a>
+                <?php if ($cart_items) { ?>
+                    <?php foreach ($cart_items as $item) { ?>
+                        <p><?= htmlspecialchars($item->title) ?> &middot; <?= htmlspecialchars($item->size) ?> &times; <?= (int)$item->amount ?> &mdash; $<?= number_format((float)$item->total, 2) ?></p>
+                    <?php } ?>
+                    <p><strong>Subtotal: $<?= number_format((float)$cart_total, 2) ?></strong></p>
+                    <a href="confirmation.php" class="form-button">Place order</a>
 
                 <?php } else { ?>
 

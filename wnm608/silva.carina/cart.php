@@ -3,7 +3,10 @@
 include_once "lib/php/functions.php";
 include_once "sections/templates.php";
 
-$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+//$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+$cart_items = getCartItems();
+
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -37,7 +40,7 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
             </thead>
 
             <tbody>
-                <?= array_reduce($cart, 'cartListTemplate', '') ?>
+                <?= array_reduce($cart_items, 'cartListTemplate', '') ?>
             </tbody>
         </table>
 
@@ -47,25 +50,7 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
       <div class="card flat">
         <h2>Order summary</h2>
 
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Sub Total</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Shipping</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Tax</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Total</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section">
-          <a href="checkout.php" class="form-button">checkout</a>
-        </div>
+        <?= cartTotals() ?>
 
       </div>
       

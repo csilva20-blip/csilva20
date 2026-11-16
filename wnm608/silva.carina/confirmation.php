@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+
+clearCart();
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 

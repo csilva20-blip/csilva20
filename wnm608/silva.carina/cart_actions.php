@@ -10,17 +10,39 @@ switch ($_GET['action'] ?? '') {
 		header("location:added-to-cart.php?id={$_POST['product-id']}");
 		break;
 
+	
+	
 	case 'update-cart-item':
-	// 	header("location: {$_SERVER['PHP_SELF']}?id={$_GET['id']}");
-	break;
+	    $id = filter_input(INPUT_POST, 'product-id', FILTER_VALIDATE_INT);
+	    $amount = filter_input(INPUT_POST, 'amount', FILTER_VALIDATE_INT);
+
+	    if ($id === false || $id === null || $id < 1 ||
+	        $amount === false || $amount === null || $amount < 0) {
+	        header("location:cart.php");
+	        exit; }
+
+	    if ($amount == 0) {
+	        $_SESSION['cart'] = array_values(array_filter(
+	            getCart(),
+	            function($o) use ($id) {
+	                return $o->id != $id;} ));
+	    } else {
+	        $p = cartItemById($id);
+
+	        if ($p) { $p->amount = $amount; }
+	    }
+
+	    header("location:cart.php");
+	    exit;
 
 	case 'delete-cart-item':
-	// 	header("location: {$_SERVER['PHP_SELF']}");
-	break;
+		$_SESSION['cart'] = array_filter($_SESSION['cart'], function($o){return $o->id!=$_POST['id'];});
+		header("location:cart.php");
+		break;
 
 	case 'clear-cart':
-	clearCart();
-	break;
+		clearCart();
+		break;
 
 	default:
 		die("Incorrect Action");
